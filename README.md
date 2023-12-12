@@ -58,5 +58,5 @@ To install a Chrome extension from a GitHub repository, you can follow these gen
 
 ## Screenshots
 
-![App Screenshot](/temp.png)
+![App Screenshot](/temp.jpg)
 
