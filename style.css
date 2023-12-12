@@ -232,17 +232,17 @@ body {
   gap: 10px;
 }
 #settingIcon{
-  color: white;
-  border: thin solid var(--shade-2);
+  color: black;
+  border: thin solid #ffffffa6;
   padding: 10px;
   border-radius: 20%;
-  background-color: var(--shade-2);
+  background-color: #ffffffa6;
   width: fit-content;
   right: 0;
 }
 #settingBar{
   display: none;
-  background-color: var(--shade-2-5);
+  background-color: #ffffffa6;
   height: fit-content;
   border-radius: 10px;
   gap: 5px;
