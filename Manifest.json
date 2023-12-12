@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "Cosmic Clock Tab is the new tab clock. New tab allows you to see an analog clock when you open it. You can use it with 8 clock theme.The themes were inspired by galaxies and orbits.",
     "chrome_url_overrides": {
-        "newtab": "newtab.html"
+        "newtab": "index.html"
     },
     "permissions": ["storage"],
     "icons": {
