@@ -122,6 +122,8 @@ body {
   background: var(--shade-1);
   border-radius: 100%;
   z-index: 25;
+  filter: drop-shadow(2px 4px 6px black);
+
 }
 .orbit-2 {
   width: 410px;
@@ -129,6 +131,7 @@ body {
   background: var(--shade-2);
   border-radius: 100%;
   z-index: 23;
+  filter: drop-shadow(2px 4px 6px black);
 }
 .orbit-3 {
   width: 540px;
@@ -136,6 +139,7 @@ body {
   background: var(--shade-2-5);
   border-radius: 100%;
   z-index: 21;
+  filter: drop-shadow(2px 4px 6px black);
 }
 .stars > div {
   width: 100vw;
@@ -250,6 +254,7 @@ body {
   padding: 5px 0;
   cursor: pointer;
   text-align: center;
+  filter: drop-shadow(2px 4px 6px black);
 }
 #items{
   display: flex;
@@ -284,7 +289,7 @@ body {
   transition: color 0.5s ease-in-out;
 }
 .Credit>a:hover{
-  
+
   color: white;
 }
 #settingBar>hr{
