@@ -74,6 +74,7 @@ body {
   color: black;
   color: var(--text-color);
   transition: all 1s ease-in-out;
+  user-select: none !important;
 }
 .container,
 .sun,
@@ -106,6 +107,7 @@ body {
   font-weight: lighter;
   line-height: 0.9;
   font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
 }
 .sun {
   height: 100px;
@@ -243,6 +245,7 @@ body {
   background-color: #ffffffa6;
   width: fit-content;
   right: 0;
+  cursor: pointer;
 }
 #settingBar{
   display: none;
@@ -294,4 +297,15 @@ body {
 }
 #settingBar>hr{
   width: 3rem;
+}
+
+#formate_input{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+#formate_input>label{
+  opacity: .80;
 }

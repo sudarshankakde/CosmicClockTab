@@ -1,8 +1,10 @@
 let stars = document.querySelectorAll(".star");
 const currentDate = new Date();
-let hours = currentDate.getHours() % 12 || 12;
+let hours;
 let minutes = currentDate.getMinutes();
 let second = currentDate.getSeconds();
+var h24 = currentDate.getHours();
+var h12 = currentDate.getHours() % 12 || 12;
 // nubric clock time
 let currentHour = document.getElementById("currentHour");
 let currentMinute = document.getElementById("currentMinute");
@@ -19,9 +21,31 @@ let currentSecDeg = 0;
 let themeSelected = localStorage.getItem("themeSelected");
 let timeformat = localStorage.getItem("timeFormat");
 
+let formate = document.getElementById("formate_input");
+formate.onclick = () => {
+  let formate_value = document.getElementById("formate").checked;
+  if (formate_value) {
+    localStorage.setItem("timeFormat", "true");
+    hours = h24;
+    currentHour.innerHTML = hours;
+  } else {
+    localStorage.setItem("timeFormat", "false");
+    hours = h12;
+    currentHour.innerHTML = hours;
+  }
+};
+
 window.addEventListener("load", () => {
-  // set time on sun
-  currentHour.innerHTML = hours;
+  if (timeformat == undefined || timeformat == null || timeformat == "false") {
+    document.getElementById("formate").checked = false;
+    hours = h12;
+    currentHour.innerHTML = hours;
+  } else {
+    document.getElementById("formate").checked = true;
+    hours = h24;
+    currentHour.innerHTML = hours;
+  }
+
   currentMinute.innerHTML = minutes;
 
   // setting degree of each planet
@@ -113,13 +137,12 @@ document.getElementById("settingIcon").addEventListener("click", function () {
 
 document.addEventListener("click", function (event) {
   // If user clicks inside the element, do nothing
-  if (event.target.closest("#items")||event.target.closest('#settingIcon')) {
+  if (event.target.closest("#items") || event.target.closest("#settingIcon")) {
     //debugger;
     return;
   } else {
     document.getElementById("settingBar").style.display = "none";
     document.getElementById("settingIcon").setAttribute("data-event", "closed");
-    
   }
 
   // If user clicks outside the element, hide it!
